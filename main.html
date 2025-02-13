@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عداد الأذكار</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: white;
+            text-align: center;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+            width: 80%;
+            max-width: 400px;
+        }
+        h2 {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+        p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        button {
+            font-size: 20px;
+            padding: 12px 20px;
+            background-color: #ff9800;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+        button:hover {
+            background-color: #e68900;
+        }
+        #counter {
+            font-size: 28px;
+            font-weight: bold;
+            margin-top: 20px;
+            color: #ffd700;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>من أعمال الليلة:</h2>
+        <p>قراءة "سبحان الله والحمد لله ولا إله إلا الله والله أكبر" 100 مرة</p>
+        <button onclick="increaseCounter()">اضغط للتسبيح</button>
+        <p id="counter">0</p>
+    </div>
+
+    <script>
+        let count = 0;
+        function increaseCounter() {
+            if (count < 100) {
+                count++;
+                document.getElementById("counter").innerText = count;
+            }
+        }
+    </script>
+
+</body>
+</html>
